@@ -13,7 +13,7 @@ public class User {
         this.age = age;
         this.birthday = birthday;
 
-        System.out.println("user对象创建啦!");
+        System.out.println("user对象创建啦啦啦!");
     }
 
     public String getName() {
