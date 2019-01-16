@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="userService" class="com.itheima.service.impl.UserServiceImpl"/>-->
+
+    <!--<bean id="userFactory" class="com.itheima.factory.UserServiceFactory"/>-->
+    <!--<bean id="userService" factory-bean="userFactory" factory-method="getBean"/>-->
+
+    <bean id="userService" class="com.itheima.factory.UserServiceFactory" factory-method="getBean"/>
+
+    <bean id="user" class="com.itheima.bean.User" >
+        <constructor-arg name="name" value="老陈"/>
+        <constructor-arg name="age"  value="20"/>
+        <constructor-arg name="birthday" ref="now"/>
+    </bean>
+
+    <bean id="now" class="java.util.Date"/>
+
+
+</beans>
